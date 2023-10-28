@@ -1,0 +1,49 @@
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100px;
+    background-color: black;
+}
+
+h1 a{
+    text-decoration: none;
+    color: white;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+}
+
+.links li{
+    list-style: none;
+    margin-right: 10px;
+    font-size: 30px;
+}
+
+.links li a{
+    text-decoration: none;
+    color: white;
+} 
+
+.itemCount{
+    width: fit-content;
+    background-color: black;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+}
+
+.carrito{
+    margin-left: 30px;
+}
+
+.itemCount span{
+    color: white;
+}
+
+.brand{
+    font-size: 30px;
+}
