@@ -21,6 +21,7 @@ h1 a{
     list-style: none;
     margin-right: 10px;
     font-size: 30px;
+    border: 1px white solid;
 }
 
 .links li a{
@@ -46,4 +47,19 @@ h1 a{
 
 .brand{
     font-size: 30px;
+}
+
+.drinks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.drinks img{
+    width: 350px;
+}
+
+.container-item{
+    margin-top: 10px;
 }

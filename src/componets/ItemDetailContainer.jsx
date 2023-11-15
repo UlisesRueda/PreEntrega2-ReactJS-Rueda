@@ -1,7 +1,5 @@
 import React, {useState, useEffect} from "react";
-import Title from "./Title";
-import ItemCount from "./ItemCount";
-import ItemList from "./itemList";
+import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 
 const drinks = [
@@ -27,41 +25,26 @@ const drinks = [
     category:"frutas"
     },
 ]
-    
 
-
-const ItemListContainer = (props) =>{
-
+const ItemDetailContainer = () => {
     const [data, setData] = useState([]);
 
-    const {categoriaID} = useParams();
+    const [ detalleId ] = useParams();
 
     useEffect(() => {
         const getData = new Promise(resolve => {
             setTimeout(() => {
                 resolve(drinks);
-            }, 1000)
+            }, 3000);
         });
-        if(categoriaID){
-            getData.then(res => setData(res.filter(drink => drink.category === categoriaID)));
-        }else{
-            getData.then(res => setData(res));
-        }
 
-    }, [categoriaID])
+        getData.then(res => setData(res.find(trago => trago.id === parseInt(detalleId))));
+    }, []);
 
-    const onAdd = (quantity) =>{
-        alert(`Compraste ${quantity} unidades`);
-    }
- 
+
     return (
-        <>
-            <Title greeting={props.texto} />
-            <ItemCount initial={1} stock={5} onAdd={onAdd} />
-            <ItemList data={data}/>
-        </>
-            
-    )
+        <ItemDetail data={data} />
+    );
 }
 
-export default ItemListContainer
+export default ItemDetailContainer;
