@@ -13,9 +13,9 @@ function NavBar(){
                 <ul className="links">
                     <li><NavLink to='/'>Home</NavLink></li>
 
-                    <li><NavLink to='/categoria/frutas'>Trago Fruta</NavLink></li>
+                    <li><NavLink to='/category/frutas'>Trago Fruta</NavLink></li>
 
-                    <li><NavLink to='/categoria/chocolate'>Trago Chocolate</NavLink></li>
+                    <li><NavLink to='/category/chocolate'>Trago Chocolate</NavLink></li>
 
                     <li className="carrito"><NavLink to='/cart'> <CartWidget/></NavLink></li>
                 </ul>
